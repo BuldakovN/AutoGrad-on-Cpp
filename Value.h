@@ -27,6 +27,8 @@ class Value{
         friend Value mul(Value&, Value&);
         friend Value operator+(Value&, Value&);
         friend Value add(Value&, Value&);
+        friend bool operator==(Value&, Value&);
+        friend bool operator==(const Value&, const Value&);
         Value operator*(const float);
         Value operator+=(Value&);
         Value pow(float);
@@ -35,7 +37,8 @@ class Value{
         friend std::ostream& operator<<(std::ostream&, const Value&);
 
         ///////////
-        void backward();
+        void backward(float=1.f);
+        float getGrad();
 };
 
 #endif // !VALUE_H_

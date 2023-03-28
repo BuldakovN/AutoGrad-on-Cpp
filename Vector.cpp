@@ -146,7 +146,6 @@ Vector Vector::operator*(Matrix &m)
     return *result;
 }
 
-
 void Vector::push_back(Value &value)
 {
     vec.push_back(value);
